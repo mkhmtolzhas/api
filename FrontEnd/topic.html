@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style/topic.css">
+    <link rel="icon" href="/static/images/logo.jpg" type="image/x-icon">
+    <title>Tengri News</title>
+</head>
+<body>
+    <a href="top"></a>
+    <header class="header" id="site-header">
+        <a href="http://127.0.0.1:8000/" class="logo" onclick="redirectToMainPage()"><img src="/static/images/logo.jpg" alt="" class="logo-img"><span class="c-green">TENGRI</span> NEWS</a>
+        <nav class="navbar">
+            <a href="http://127.0.0.1:8000/" class="">News</a>
+            <a href="find-out" class="">Relevant</a>
+            <a href="sport" class="">Sport</a>
+            <a href="travel" class="">Travel</a>
+            <ion-icon name="search"></ion-icon>
+            <input type="text" name="search" placeholder="Search..." id="searchArticles">
+            <button class="btn" onclick="searchArticles()" type="submit" value="Submit">Start</button>
+        </nav>
+        <nav class="navbar">
+            <a href="#contacts" class="">About Us</a>
+            <a href="#">Advertisement</a>
+        </nav>
+    </header>
+    <section class="content">
+        <div class="inner-content">
+            <h1 style="text-transform: capitalize;">
+                {{ name_of_genre }}
+            </h1>
+            <div class="container">
+                <div class="article-box">
+                    {% for article in articles %}
+                    <a href="{{ article.link }}" class="center">
+                        <div class="content-article">
+
+                            <div class="img" style="background-image: url({{ article.image }}); background-size: cover;"></div>
+                            <div class="title-content">
+                                <h3>{{ article.title }}</h3>
+                            </div>
+                        </div>
+                    </a>
+                    {% endfor %}
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer" id = "contacts">
+        <div class="sections">
+            <h5>NEWS</h5>
+            <li>
+                <a href="Almaty">Алматы</a>
+            </li>
+            <li>
+                <a href="Astana">Астана</a>
+            </li>
+            <li>
+                <a href="#top">В начало</a>
+            </li>
+        </div>
+        <div class="sections">
+            <h5>FOR NFACTORIAL</h5>
+            <li>
+                <a href="https://github.com/mkhmtolzhas/TengriNews-For-nfac/">Репозитории в GitHub</a>
+            </li>
+            <li>
+                <a href="tel:+77767301903">Номер телефона</a>
+            </li>
+            <li>
+                <a href="">Эл. почта: mkhmtcore@gmail.com</a>
+            </li>
+        </div>
+        <div class="sections">
+            <h5>SOCIALS</h5>
+            <div class="socials">
+                <a target="_blank" href="https://www.instagram.com/mkhmtlzhs/"><img src="/static/icons/Instagram.svg" alt="Instagram"></a>
+                <a target="_blank" href="https://www.linkedin.com/in/olzhas-makhmet-6793332a7?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"><img src="/static/icons/LinkedIn.svg" alt="LinkedIn"></a>
+                <a target="_blank" href="https://t.me/mkhmtcore"><img src="/static/icons/Telegram.svg" alt="Telegram"></a>
+                <a target="_blank" href="https://github.com/mkhmtolzhas"><img src="/static/icons/GitHub.svg" alt="GitHub"></a>
+            </div>
+        </div>
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="/static/JavaScripts/search.js"></script>
+</body>
+</html>

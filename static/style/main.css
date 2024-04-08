@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: inter;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: #fff;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 8%;
+    background-color: rgba(255, 255, 255, 0);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    transition: background-color 0.3s ease;
+}
+
+.home.transparent {
+    background: #303133;
+}
+  
+.logo {
+    font-size: 25px;
+    color: #fff;
+    font-weight: 600;
+    text-shadow: black 0 0 5px, black 0 0 5px, black 0 0 3px; 
+    display: flex;
+    align-items: center; 
+}
+.logo-img {
+    width: 40px;
+    height: 40px;
+    margin-right: 5px;
+}
+
+.c-green {
+    color: #32a801   
+}
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar a{
+    font-size: 18px;
+    color: #fff;
+    font-weight: 500;
+    margin: 0 10px;
+    transition: .3s;
+    text-shadow: black 0 0 5px, black 0 0 5px, black 0 0 3px;  
+}
+
+.navbar a:hover, .navbar a.active{
+    color: #32a801
+
+}
+
+
+input {
+    border-radius: 7px;
+    border-color: transparent;
+    text-indent: 5px;
+    box-shadow: 0px 3px 2px 0px rgba(0, 0, 0, 0.5);
+}
+input:focus {
+    outline: none;
+    box-shadow: 0px 3px 2px 0px rgba(0, 0, 0, 0.5);
+}
+ion-icon {
+    margin-right: 7px;
+}
+.btn {
+    border-radius: 5px;
+    width: 70px;
+    height: 25px;
+    margin-left: 7px;
+    background: #32a801;
+    border: 2px solid #32a801;
+    color: #fff;
+    font-size: 14px;
+    box-shadow: 0px 3px 2px 0px rgba(0, 0, 0, 0.5);
+
+}
+
+
+
+
+.home {
+    width: 100%;
+    height: 100vh;
+    background: url('../images/IMG_4912.JPEG') no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 50px 8% 0;
+}
+
+.home-content {
+    max-width: 630px;
+}
+
+.home-content h1, .content-box h1 {
+    font-size: 45px;
+    line-height: 1.2;
+    /* color: #32a801; */
+    text-shadow: black 0 0 4px, black 0 0 12px, black 0 0 1px;  
+}
+
+
+
+.content {
+    width: 100%;
+    min-height: 20vh;
+    background-color: #f1f2f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 70px 0px 0px 0px;
+}
+.first-content {
+    padding: 70px 0px 0px 0px;
+}
+.last-content {
+    padding: 70px 0px 70px 0px;
+}
+
+.content h1 {
+    color: black;
+    font-size: 45px;
+    line-height: 1.2;
+    text-align: center;
+    margin-top: 6px;
+
+}
+
+.inner-content {
+    width: 90%;
+    min-height: 80vh;
+    background-color: #fff;
+    border-radius: 14px;
+    padding: 30px 20px;
+}
+
+.container {
+    width: 100%;
+    min-height: 20vh;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.article-box {
+    width: 95%;
+    min-height: 20vh;
+    /* margin-top: 10px;
+    padding: 0px 50px; */
+}
+
+.content-article {
+    width: 90%;
+    height: 55vh;
+    border-radius: 20px;
+    background-color: black;
+    box-shadow: 0px 15px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+
+.slick-arrow {
+    filter: drop-shadow(6px 6px 3px rgba(0, 0, 0, 0.8));
+}
+
+
+
+
+footer {
+    width: 100%;
+    height: 40vh;
+    background: #303133 ;
+    padding: 50px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sections {
+    width: calc(100%/3.5);
+    height: 100%;
+    color: #fff;
+    /* text-align: center; */
+}
+
+
+.sections li{
+    list-style-type: none;
+    margin-top: 15px;
+}
+
+.sections a{
+    font-size: 18px;
+    color: #fff;
+    transition: 0.3s ease;
+}
+
+.sections a:hover {
+    color: #32a801;
+}
+
+.socials {
+    letter-spacing: 1px;
+    margin: 10px 0;
+}
+
+.socials img{
+    width: 35px;
+    height: 35px;
+}
+
+.sections h5 {
+    font-size: 20px;
+}

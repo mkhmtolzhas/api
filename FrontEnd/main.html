@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style/main.css">
+    <link rel="icon" href="/static/images/logo.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+    <title>Tengri News</title>
+</head>
+<body>
+    <a href="top"></a>
+    <header class="header" id="site-header">
+        <a href="http://127.0.0.1:8000/" class="logo" onclick="redirectToMainPage()"><img src="/static/images/logo.jpg" alt="" class="logo-img"><span class="c-green">TENGRI</span> NEWS</a>
+        <nav class="navbar">
+            <a href="http://127.0.0.1:8000/" class="active">News</a>
+            <a href="find-out" class="">Relevant</a>
+            <a href="sport" class="">Sport</a>
+            <a href="travel" class="">Travel</a>
+            <ion-icon name="search"></ion-icon>
+            <input type="text" name="search" placeholder="Search..." id="searchArticles">
+            <button class="btn" onclick="searchArticles()">Start</button>
+        </nav>
+        <nav class="navbar">
+            <a href="#contacts" class="">About Us</a>
+            <a href="#">Advertisement</a>
+        </nav>
+    </header>
+    <section class="home">
+        <div class="home-content">
+            <h1>Актуальные</h1>
+            <h1>новости в любое</h1>
+            <h1>время!</h1>
+        </div>
+    </section>
+    <section class="content first-content">
+        <div class="inner-content">
+            <h1>News</h1>
+            <div class="container">
+                <div class="article-box slider2">
+                    {% for main in mains %}
+                    <center>
+                        <a href="{{ main.link }}">
+                            <div class="content-article" style="background-image: url({{ main.image }}); background-repeat: no-repeat; background-size: cover; background-position: center; vertical-align: bottom;"></div>
+                        </a>
+                        <h1 class="article-title" style="margin-top: 20px; margin-bottom: 20px; font-size: 27px;">{{ main.title }}</h1>
+                    </center>
+                    {% endfor %}
+                </div>
+            </div>
+            
+            <div class="container">
+                <div class="article-box slider">
+                    {% for article in articles %}
+                    <center>
+                        <a href="{{ article.link }}">
+                            <div class="content-article" style="background-image: url({{ article.image }}); background-repeat: no-repeat; background-size: cover; background-position: center; vertical-align: bottom;"></div>
+                        </a>
+                        <h1 class="article-title" style="margin-top: 20px; margin-bottom: 20px; font-size: 19px;">{{ article.title }}</h1>
+                    </center>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="content">
+        <div class="inner-content">
+            <h1>Relevant</h1>
+            <div class="container">
+                <div class="article-box slider">
+                    {% for relevant in relevants %}
+                    <center>
+                        <a href="{{ relevant.link }}">
+                            <div class="content-article" style="background-image: url({{ relevant.image }}); background-repeat: no-repeat; background-size: cover; background-position: center; vertical-align: bottom;"></div>
+                        </a>
+                        <h1 class="article-title" style="margin-top: 20px; margin-bottom: 20px; font-size: 19px;">{{ relevant.title }}</h1>
+                    </center>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="content">
+        <div class="inner-content">
+            <h1>Sport News</h1>
+            <div class="container">
+                <div class="article-box slider">
+                    {% for sport in sports %}
+                    <center>
+                        <a href="{{ sport.link }}">
+                            <div class="content-article" style="background-image: url({{ sport.image }}); background-repeat: no-repeat; background-size: cover; background-position: center; vertical-align: bottom;"></div>
+                        </a>
+                        <h1 class="article-title" style="margin-top: 20px; margin-bottom: 20px; font-size: 19px;">{{ sport.title }}</h1>
+                    </center>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="content">
+        <div class="inner-content">
+            <h1>Travel</h1>
+            <div class="container">
+                <div class="article-box slider">
+                    {% for travel in travels %}
+                    <center>
+                        <a href="{{ travel.link }}">
+                            <div class="content-article" style="background-image: url({{ travel.image }}); background-repeat: no-repeat; background-size: cover; background-position: center; vertical-align: bottom;"></div>
+                        </a>
+                        <h1 class="article-title" style="margin-top: 20px; margin-bottom: 20px; font-size: 19px;">{{ travel.title }}</h1>
+                    </center>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="content last-content">
+        <div class="inner-content">
+            <h1>Education</h1>
+            <div class="container">
+                <div class="article-box slider">
+                    {% for edu in edus %}
+                    <center>
+                        <a href="{{ edu.link }}">
+                            <div class="content-article" style="background-image: url({{ edu.image }}); background-repeat: no-repeat; background-size: cover; background-position: center; vertical-align: bottom;"></div>
+                        </a>
+                        <h1 class="article-title" style="margin-top: 20px; margin-bottom: 20px; font-size: 19px;">{{ edu.title }}</h1>
+                    </center>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+    <a href="contacts"></a>
+    <footer class="footer" id = "contacts">
+        <div class="sections">
+            <h5>NEWS</h5>
+            <li>
+                <a href="Almaty">Алматы</a>
+            </li>
+            <li>
+                <a href="Astana">Астана</a>
+            </li>
+            <li>
+                <a href="#top">В начало</a>
+            </li>
+        </div>
+        <div class="sections">
+            <h5>FOR NFACTORIAL</h5>
+            <li>
+                <a href="https://github.com/mkhmtolzhas/TengriNews-For-nfac/">Репозитории в GitHub</a>
+            </li>
+            <li>
+                <a href="tel:+77767301903">Номер телефона</a>
+            </li>
+            <li>
+                <a href="">Эл. почта: mkhmtcore@gmail.com</a>
+            </li>
+        </div>
+        <div class="sections">
+            <h5>SOCIALS</h5>
+            <div class="socials">
+                <a target="_blank" href="https://www.instagram.com/mkhmtlzhs/"><img src="/static/icons/Instagram.svg" alt="Instagram"></a>
+                <a target="_blank" href="https://www.linkedin.com/in/olzhas-makhmet-6793332a7?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"><img src="/static/icons/LinkedIn.svg" alt="LinkedIn"></a>
+                <a target="_blank" href="https://t.me/mkhmtcore"><img src="/static/icons/Telegram.svg" alt="Telegram"></a>
+                <a target="_blank" href="https://github.com/mkhmtolzhas"><img src="/static/icons/GitHub.svg" alt="GitHub"></a>
+            </div>
+        </div>
+    </footer>
+    <script src="/static/JavaScripts/header.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script src="/static/JavaScripts/slick.js"></script>
+    <script src="/static/JavaScripts/slick.min.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="/static/JavaScripts/search.js"></script>
+</body>
+</html>
