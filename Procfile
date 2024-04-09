@@ -1,2 +1,2 @@
-web: gunicorn -b 0.0.0.0:8000 main:app
+web: gunicorn main:app --workers 1 --worker-class uvicorn.workers.UvicornWorker --bind=0.0.0.0:8000
 worker: python run.py
