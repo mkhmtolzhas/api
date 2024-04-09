@@ -4,11 +4,9 @@ RUN mkdir /fastapi_app
 
 WORKDIR /fastapi_app
 
-RUN pip install -r requirements.txt
-
-
 COPY requirements.txt .
 
+RUN pip install -r requirements.txt
 
 COPY . .
 
