@@ -9,7 +9,7 @@ router = APIRouter(
 )
 
 
-templates = Jinja2Templates(directory="FrontEnd")
+templates = Jinja2Templates(directory="/fastapi_app/FrontEnd")
 
 @router.get("/")
 def get_home_page(request : Request):
