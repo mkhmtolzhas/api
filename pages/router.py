@@ -1,6 +1,6 @@
 from fastapi import APIRouter, Request
 from fastapi.templating import Jinja2Templates
-from parser.parse_any_topic import get_html, get_content, URL
+from parser.parse_pagination import get_html, get_content, URL
 from parser.parse_all import parse_all
 
 router = APIRouter(
@@ -24,6 +24,14 @@ def get_sorted_news(request: Request, name_of_genre):
     html = get_html(url=URL, params=name_of_genre)
     articles = get_content(html.text)
     return templates.TemplateResponse('topic.html', {"request" : request, "name_of_genre" : name_of_genre, "articles" : articles})
+
+
+@router.get("/{name_of_genre}/{page_number}")
+def get_sorted_news(request: Request, name_of_genre, page_number = 1):
+    html = get_html(url=URL, params=name_of_genre, page=page_number)
+    articles = get_content(html.text)
+    return templates.TemplateResponse('topic.html', {"request" : request, "name_of_genre" : name_of_genre, "articles" : articles})
+
 
 
 # ./json/articles.json

@@ -22,6 +22,13 @@
 //       section.classList.remove('transparent');
 //     }
 //   });
+gsap.registerPlugin(ScrollSmoother, ScrollTrigger)
+ScrollSmoother.create({
+  wrapper:".wrapper",
+  content:".content_main",
+  smooth: 1.5,
+  effects: true,
+}); 
 
 
 window.addEventListener('scroll', function() {

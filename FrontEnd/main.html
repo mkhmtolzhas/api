@@ -8,14 +8,28 @@
     <link rel="icon" href="/static/images/logo.jpg" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"defer></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"defer></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js" defer></script>
+    <script src="/static/libs/ScrollTrigger.min.js" defer></script>
+    <script src="/static/libs/gsap.min.js" defer></script>
+    <script src="/static/libs/ScrollSmoother.min.js" defer></script>
+    <script src="/static/JavaScripts/header.js" defer></script>
+    <script src="/static/JavaScripts/slick.js"defer></script>
+    <script src="/static/JavaScripts/slick.min.js"defer></script>
+    <script src="/static/JavaScripts/search.js"></script>
+    
     <title>Tengri News</title>
 </head>
 <body>
-    <a href="top"></a>
+    <div class="wrapper">
+        <div class="content_main">
+            <a href="top"></a>
     <header class="header" id="site-header">
-        <a href="https://api-k3a9.onrender.com/" class="logo" onclick="redirectToMainPage()"><img src="/static/images/logo.jpg" alt="" class="logo-img"><span class="c-green">TENGRI</span> NEWS</a>
+        <a href="http://127.0.0.1:8000/" class="logo"><img src="/static/images/logo.jpg" alt="" class="logo-img"><span class="c-green">TENGRI</span> NEWS</a>
         <nav class="navbar">
-            <a href="https://api-k3a9.onrender.com/" class="active">News</a>
+            <a href="http://127.0.0.1:8000/" class="active">News</a>
             <a href="find-out" class="">Relevant</a>
             <a href="sport" class="">Sport</a>
             <a href="travel" class="">Travel</a>
@@ -169,13 +183,9 @@
             </div>
         </div>
     </footer>
-    <script src="/static/JavaScripts/header.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
-    <script src="/static/JavaScripts/slick.js"></script>
-    <script src="/static/JavaScripts/slick.min.js"></script>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <script src="/static/JavaScripts/search.js"></script>
+        </div>
+    </div>
+
+    
 </body>
 </html>
