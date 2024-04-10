@@ -33,7 +33,8 @@ def get_content(html):
                 {
                     "title" : item.find("span", class_="content_main_item_title").find('a').get_text(strip = True),
                     "link" : link,
-                    "image" : item.find("a").find("picture").find("img").get("src")
+                    "image" : item.find("a").find("picture").find("img").get("src"),
+                    "date" : item.find("div", class_="content_main_item_meta").find("span").get_text(strip = True)
                 }
             )
         except:
@@ -42,11 +43,9 @@ def get_content(html):
 
 
 def parser():
-    html = get_html(url=URL, params="life", page=2)
+    html = get_html(url=URL, params="life", page=1)
     articles = get_content(html.text)
-    for i in articles:
-        print(i["title"])
-    with open("./idk.json", "x") as file:
+    with open("./idk.json", "w") as file:
         json.dump(articles, file, indent=4, ensure_ascii=False)
 
 if __name__ == "__main__":
